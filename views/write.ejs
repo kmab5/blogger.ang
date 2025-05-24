@@ -1,0 +1,15 @@
+<%- include('partials/header.ejs') %>
+
+<h1>Write Your Blog!</h1>
+<h3>What do you want to do write about?</h3>
+
+<form action="/write" method="POST">
+    <input type="text" placeholder="Title" name="title" id="title" <% if (locals.blog) { %> value="<%= blog.title %>" <% } %> required>
+    <textarea name="content" id="content" placeholder="Write your blog here..."><% if (locals.blog) { %><%= blog.content %><% } %></textarea>
+    <% if (locals.id) { %>
+        <input type="hidden" name="id" value="<%= id %>">
+    <% } %>
+    <input type="submit" value="Publish">
+</form>
+
+<%- include('partials/footer.ejs') %>

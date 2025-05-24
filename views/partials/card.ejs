@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="left-bar lft">
+        <h2><%= blog.title %></h2>
+        <p><%= blog.date %></p>
+    </div>
+    <form action="/blog" method="GET" class="right-bar">
+        <input type="hidden" name="id" id="id" value="<%= blog.id %>">
+        <input type="submit" value="Read More">
+    </form>
+</div>

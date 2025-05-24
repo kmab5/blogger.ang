@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: hsl(0, 0%, 30%);
+    transition: all 0.3s ease;
+}
+
+body {
+    background-color: hsl(90, 100%, 95%);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+nav {
+    background-color: hsl(90, 100%, 40%);
+    display: flex;
+    padding: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > a {
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+
+}
+
+.menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #000;
+}
+
+.menu a:hover {
+    color: hsl(0, 0%, 100%);
+}
+
+footer {
+    display: flex;
+    background-color: hsl(90, 100%, 40%);
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0 1rem 0;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 8rem;
+    text-align: center;
+}
+
+main > * {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.link-btn, input[type="submit"] {
+    border: none;
+    padding: 1rem;
+    background-color: hsl(90, 100%, 40%);
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 0.5rem;
+}
+
+.link-btn:hover, input[type="submit"]:hover {
+    background-color: hsl(0, 0%, 30%);
+    color: hsl(90, 100%, 50%);
+    border-radius: 0.1rem;
+}
+
+h1 {
+    margin: 1rem 0;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+input[type="text"], textarea {
+    padding: 0.5rem;
+    border: 0.2rem solid hsl(0, 0%, 30%);
+    border-radius: 0.5rem;
+    background-color: hsl(90, 100%, 95%);
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-radius: 0.2rem;
+    background-color: hsl(90, 100%, 75%);
+}
+
+textarea {
+    min-height: 16rem;
+}
+
+h4 {
+    font-weight: 300;
+    font-size: 0.8rem;    
+}
+
+.content {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: normal;
+    margin: 1rem 0 1rem 0;
+    width: 100%;
+    text-align: left;
+    white-space: pre-wrap;
+}
+
+.mini {
+    text-align: left;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.1rem;
+    align-self: flex-start;
+    width: auto;
+}
+
+
+.lft {
+    text-align: left;
+    align-self: flex-start;
+}
+
+.rgt {
+    text-align: right;
+    align-self: flex-end;
+}
+
+.left-bar {
+    flex: 2 0 auto;
+}
+
+.left-bar p {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.right-bar {
+    width: auto;
+}
+
+.str {
+    flex: 2 0 auto;
+}
+
+.spacer {
+    width: 2rem;
+    height: 2rem;
+}

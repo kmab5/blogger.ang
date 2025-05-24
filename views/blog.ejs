@@ -1,0 +1,25 @@
+<%- include('partials/header.ejs') %>
+
+<a class="link-btn mini" href="/read">Back</a>
+
+<div class="col">
+    <h1 class="lft"><%= blog.title %></h1>
+    <h4 class="lft"><%= blog.date %></h4>
+</div>
+
+<p class="content lft">
+    <%= blog.content %>
+</p>
+
+<div class="container">
+    <form action="/delete" method="POST">
+        <input type="hidden" name="id" value="<%= blog.id %>">
+        <input type="submit" value="Delete Forever">
+    </form>
+    <form action="/edit" method="POST">
+        <input type="hidden" name="id" value="<%= blog.id %>">
+        <input type="submit" value="Edit">
+    </form>
+</div>
+
+<%- include('partials/footer.ejs') %>

@@ -1,0 +1,13 @@
+<%- include('partials/header.ejs') %>
+
+<h1>Your Blogs!</h1>
+
+<% if(locals.blogs && Object.values(blogs).length > 0) {%>
+    <% Object.values(blogs).forEach(function(blog) { %>
+        <%- include('partials/card.ejs', { blog: blog }) %>
+    <% }); %>
+<% } else { %>
+    <h3>You don't have blogs for now 😢</h3>
+<% } %>
+
+<%- include('partials/footer.ejs') %>
