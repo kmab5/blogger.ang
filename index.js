@@ -1,10 +1,14 @@
 import express from "express";
 import bodyParser from "body-parser";
+import LocalStorage from "node-localstorage"
+
+var localStorage = new LocalStorage.LocalStorage('./scratch');
 
 const app = express();
 const port = 3000;
 
-var blogs = {};
+var blogs = JSON.parse(localStorage.getItem("blogs")) || {};
+
 var getId = function() {
     let id = 0;
     for (let i = 0; i < 8; i++) {
@@ -44,18 +48,19 @@ app.post("/write", (req, res) => {
     if (req.body.id) post.id = req.body.id;
     else post.id = getId();
     blogs[post.id.toString()] = post;
+    localStorage.setItem("blogs", JSON.stringify(blogs));
     res.redirect("/read");
 });
 
 app.post("/edit", (req, res) => {
     let id = req.body['id'];
     res.render("write.ejs", { blog: blogs[id], id: id });
-    delete blogs[id];
 });
 
 app.post("/delete", (req, res) => {
     let id = req.body['id'];
     delete blogs[id];
+    localStorage.setItem("blogs", JSON.stringify(blogs));
     res.redirect("/read");
 });
 
